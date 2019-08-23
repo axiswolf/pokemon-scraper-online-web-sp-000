@@ -30,7 +30,7 @@ class Pokemon
       LIMIT 1
     SQL
     pokemon = db.execute(sql,[id]).flatten
-      Pokemon.new(pokemon[0], pokemon[1], pokemon[2], db)
+      Pokemon.new(id, pokemon[0], pokemon[1], pokemon[2], db)
     end
   end
 
