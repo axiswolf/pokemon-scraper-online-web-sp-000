@@ -31,10 +31,10 @@ class Pokemon
     sql = <<-SQL
       SELECT *
       FROM pokemon
-      WHERE name = ?
+      WHERE id = ?
       LIMIT 1
     SQL
-    db.execute(sql,name).map do |row|
+    db.execute(sql,id).map do |row|
       Pokemon.new(row[0],row[1],row[2],db)
     end.first
   end
