@@ -36,7 +36,7 @@ class Pokemon
       LIMIT 1
     SQL
     db.execute(sql,id).map do |row|
-      Pokemon.new(id: row[0], name: row[1], type: row[2],db)
+      Pokemon.new(id: row[0],name: row[1], type: row[2],db: db)
     end.first
   end
 
