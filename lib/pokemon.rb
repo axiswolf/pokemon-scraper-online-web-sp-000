@@ -9,7 +9,7 @@ class Pokemon
     # @db = db
   end
 
-  def self.save(id = nil, name, type, db)
+  def self.save(id:, name:, type:, db:)
     # if self.id
     #   self.update
     # else
