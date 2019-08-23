@@ -34,7 +34,9 @@ class Pokemon
       WHERE name = ?
       LIMIT 1
     SQL
-    #db.execute(sql,name).map do |row|
+    db.execute(sql,name).map do |row|
+      db.name
+    end
   end
 
 end
