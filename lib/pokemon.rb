@@ -36,7 +36,7 @@ class Pokemon
     SQL
     db.execute(sql,name).map do |row|
       self.db
-    end
+    end.first
   end
 
 end
