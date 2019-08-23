@@ -8,7 +8,7 @@ class Pokemon
     @type = type
     @db = db
   end
-  
+
   def update
     sql = "UPDATE pokemon SET name = ?, type = ?, WHERE id = ?"
     db.execute(sql, self.name, self.type, self.id)
