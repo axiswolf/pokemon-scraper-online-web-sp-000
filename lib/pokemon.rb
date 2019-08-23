@@ -29,8 +29,8 @@ class Pokemon
       WHERE id = ?
       LIMIT 1
     SQL
-    db.execute(sql,id).map do |row|
-      Pokemon.new(id: row[0],name: row[1], type: row[2],db: db)
+    pokemon = db.execute(sql,[id]).flatten
+      Pokemon.new(id: pokemon[0],name: pokemon[1], type: pokemon[2],db: db)
     end.first
   end
 
